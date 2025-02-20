@@ -1,0 +1,5 @@
+.output
+.vinxi
+node_modules
+pnpm-lock.yaml
+public
