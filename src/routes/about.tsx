@@ -1,9 +1,11 @@
+import { Title } from '@solidjs/meta'
 import { A } from '@solidjs/router'
 import Counter from '~/components/Counter'
 
 export default function About() {
   return (
     <main class='mx-auto p-4 text-center text-gray-700'>
+      <Title>About - Beryllium</Title>
       <h1 class='max-6-xs my-16 text-6xl font-thin text-sky-700 uppercase'>
         About Page
       </h1>
