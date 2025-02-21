@@ -3,8 +3,6 @@ name: CI
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
   workflow_dispatch:
 
@@ -32,8 +30,12 @@ jobs:
       - name: create .nojekyll
         run: touch .output/public/.nojekyll
 
-      - name: deploy pages
-        uses: JamesIves/github-pages-deploy-action@v4.7.3
+      - name: upload artifact
+        uses: actions/upload-pages-artifact@v3
+        id: deployment
         with:
-          branch: gh-pages
-          folder: .output/public
+          path: .output/public
+
+      - name: deploy to pages
+        uses: actions/deploy-pages@v4
+        id: deployment
