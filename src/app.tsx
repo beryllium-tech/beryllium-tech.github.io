@@ -7,10 +7,7 @@ import './app.css'
 export default function App() {
   return (
     <MetaProvider>
-      <Router
-        base={import.meta.env.SERVER_BASE_URL}
-        root={Layout}
-      >
+      <Router base={import.meta.env.SERVER_BASE_URL} root={Layout}>
         <FileRoutes />
       </Router>
     </MetaProvider>
